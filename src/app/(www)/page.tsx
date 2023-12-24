@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Github } from "lucide-react";
 
 import { cn } from "@/lib/shadcn-utils";
-import { siteHeroText, siteFeatures, siteOpenSourceSection } from "@/config/site";
+import { marketingHeroText, marketingFeatures, marketingOpenSourceSection } from "@/config/marketing";
 import { PROJECT_GITHUB_LINK } from "@/config/constants";
 import SiteLogo from "@/components/site-logo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -17,13 +17,13 @@ export default function WebSitePage() {
           "flex flex-row items-center justify-center gap-x-7"
         )}>
           <SiteLogo />
-          <h1 className="site_heading_text">{siteHeroText.title}</h1>
+          <h1 className="site_heading_text">{marketingHeroText.title}</h1>
         </div>
 
         <div className="text-lg space-y-6">
           <div>
-            <p className="site_description_text">{siteHeroText.subheading}</p>
-            <p className="site_description_text">{siteHeroText.heroDescription}</p>
+            <p className="site_description_text">{marketingHeroText.subheading}</p>
+            <p className="site_description_text">{marketingHeroText.heroDescription}</p>
           </div>
 
           <div className="space-x-10 font-bold">
@@ -48,13 +48,13 @@ export default function WebSitePage() {
 
       <section className="site_section">
         <h1 className="site_heading_text">
-          {siteFeatures.heading}
+          {marketingFeatures.heading}
         </h1>
 
         <div className={cn(
           "grid grid-cols-3 gap-8",
         )}>
-          {Object.values(siteFeatures.features).map(({ Icon, description, title }) => (
+          {Object.values(marketingFeatures.features).map(({ Icon, description, title }) => (
             <Card
               key={title}
               className={cn(
@@ -81,13 +81,19 @@ export default function WebSitePage() {
 
       <section className="site_section">
         <h1 className="site_heading_text">
-          {siteOpenSourceSection.heading}
+          {marketingOpenSourceSection.heading}
         </h1>
 
         <div className="space-y-3">
-          <p className="site_description_text text-lg">
-            {siteOpenSourceSection.description}
-          </p>
+          <div className="site_description_text">
+            <p>
+              {marketingOpenSourceSection.description}
+            </p>
+
+            <p>
+              {marketingOpenSourceSection.subDescription}
+            </p>
+          </div>
 
           <Link
             href={PROJECT_GITHUB_LINK}

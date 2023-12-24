@@ -3,9 +3,9 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 import { cn } from "@/lib/shadcn-utils";
 import { PROJECT_GITHUB_LINK, PROJECT_TITLE } from "@/config/constants";
-import { Button, buttonVariants } from "@/components/ui/button";
-import { Drawer, DrawerTrigger } from "../ui/drawer";
 import ProfileDrawer from "../profile-drawer";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { Drawer, DrawerTrigger } from "@/components/ui/drawer";
 
 
 export default function SharedNavbar() {
@@ -22,11 +22,9 @@ export default function SharedNavbar() {
         <Link
           href={"/"}
           className={cn(
-            "font-bold text-xl",
-            "underline",
-            "hover:scale-110 hover:text-amber-100 transition duration-200 ease-out",
+            "font-bold text-2xl",
+            "hover:scale-110 transition duration-200 ease-out",
           )}
-          target="_blank"
         >
           {PROJECT_TITLE}
         </Link>
@@ -36,6 +34,7 @@ export default function SharedNavbar() {
           className={cn(
             "font-bold text-xl", "underline",
             "scale-[1.75]",
+            "hover:scale-[2.25] hover:rotate-6 transition duration-300",
           )}
         >
           <GitHubLogoIcon />
@@ -44,7 +43,7 @@ export default function SharedNavbar() {
 
 
       <div className={cn(
-        "flex flex-row items-center justify-between"
+        "flex flex-row items-center justify-between gap-x-10"
       )}>
         <Link
           href={"/docs"}

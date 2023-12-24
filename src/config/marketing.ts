@@ -7,19 +7,20 @@ import {
   UserCheck,
 } from "lucide-react"
 
+
 import type { TFeaturesList } from "@/types/site"
 import { PROJECT_TITLE } from "./constants"
 
 
 
-export const siteHeroText = {
+export const marketingHeroText = {
   title: PROJECT_TITLE,
   subheading: "A collection of custom React hooks for common use cases.",
   heroDescription: "Made with TypeScript ensuring type-safety and modern development techniques.",
 }
 
 
-export const siteFeatures: {
+export const marketingFeatures: {
   heading: string,
   description: string,
   features: TFeaturesList[]
@@ -62,8 +63,8 @@ export const siteFeatures: {
 }
 
 
-export const siteOpenSourceSection = {
+export const marketingOpenSourceSection = {
   heading: "Open Source",
-  description: "This project is open source on GitHub. Feel free to contribute!",
-  buttonLabel: "View on GitHub",
+  description: "This project is open source on GitHub.",
+  subDescription: "Feel free to contribute!",
 }
